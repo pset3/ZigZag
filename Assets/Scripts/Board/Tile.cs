@@ -38,6 +38,12 @@ public class Tile : MonoBehaviour
 
     void OnDespawned()
     {
+        Bonus bonus = GetComponentInChildren<Bonus>();
+
+        if (bonus != null)
+        {
+            bonus.Despawn();
+        }
     }
 
     public void Fall()
